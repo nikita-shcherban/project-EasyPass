@@ -134,32 +134,27 @@
 
 /* Mobile/Tab Menu */
 .menu-overlay {
-  display: none;
+  display: block;
+  background: rgba(1, 4, 0, 0.3);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition: 250ms ease-in-out 250ms;
 }
-@media only screen and (min-width: 768px) {
-  .menu-overlay {
-    display: block;
-    background: rgba(1, 4, 0, 0.3);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition-property: opacity, visibility;
-    transition: 250ms ease-in-out 250ms;
-  }
-  .menu-overlay.is-open {
-    opacity: 1;
-    pointer-events: initial;
-    visibility: visible;
-    transition-delay: 0ms;
-  }
+.menu-overlay.is-open {
+  opacity: 1;
+  pointer-events: initial;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 @media only screen and (min-width: 1440px) {
   .menu-overlay {
