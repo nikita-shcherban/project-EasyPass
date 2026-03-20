@@ -33,11 +33,7 @@
 .feedbacks-rating {
   margin-bottom: 24px;
 }
-.feedbacks-item-bottom {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+
 .profile-pic {
   width: 48px;
   height: 48px;
