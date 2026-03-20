@@ -58,6 +58,9 @@
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  .feedbacks-title {
+    margin-bottom: 24px;
+  }
   .feedbacks-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,10 +71,16 @@
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+  .feedbacks {
+    padding: 112px 0;
+  }
   .feedbacks-title {
     font-size: 48px;
   }
   .feedbacks-list-item {
     width: calc((100% - (24px * 3)) / 4);
+  }
+  .feedbacks-desc {
+    margin-bottom: 80px;
   }
 }
