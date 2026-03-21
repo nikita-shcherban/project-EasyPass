@@ -38,6 +38,13 @@
     min-width: 263px;
 }
 
+.assorts-img {
+    width: 343px;
+    height: 364.8px;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
 .assorts-info {
     display: flex;
     align-items: flex-start;
@@ -98,7 +105,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms ease-in-out,  background-color 250ms ease-in-out , color 250ms ease-in-out, opacity 250ms ease-in-out;
 }
 
 .assorts-button:hover,
@@ -126,6 +133,14 @@
         min-width: 320px;
     }
 
+    .assorts-img {
+        margin-bottom: 16px;
+        width: 344px;
+        height: 364.8px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        object-fit: cover;
+    }
+
 }
 
 /* Styles for Desktop devices */
@@ -142,6 +157,13 @@
 
     .assorts-list {
         gap: 24px;
+    }
+
+    .assorts-img {
+        margin-bottom: 16px;
+        width: 310px;
+        height: 364px;
+        box-shadow: none;
     }
 
 
