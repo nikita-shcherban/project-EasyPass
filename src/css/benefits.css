@@ -1,0 +1,147 @@
+
+.benefits {
+    padding: 64px 16px;
+    background-color: #1A5901;
+    display: flex;
+
+}
+
+.benefits-glav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.img-benefits {
+    margin-bottom: 24px;
+}
+
+.zaglav {
+    font-family: 'Chivo', sans-serif;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.text-for-zaglav {
+    font-family: 'Public Sans', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.text-benefits {
+    margin-bottom: 32px;
+    max-width: 343px;
+    /*    */
+}
+
+.list-for-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.person-con-div {
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.icon-svg-ben {
+    fill: #FFFFFF;
+}
+
+.min-zaglav {
+    font-family: 'Chivo', sans-serif;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.par-for {
+    font-family: 'Public Sans', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 343px;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+    .benefits-glav {
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .list-for-benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .list-for-benefits li {
+        width: calc((100% - 32px) / 2);
+    }
+
+    .text-benefits {
+        max-width: 704px;
+    }
+}
+
+/* Desk */
+
+@media screen and (min-width: 1440px) {
+
+    .benefits {
+        padding: 96px 64px;
+    }
+
+    .benefits-glav {
+        max-width: 1440px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .img-benefits {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .benefits-right {
+        flex: 1;
+    }
+
+    .zaglav {
+        font-size: 48px;
+    }
+
+    .text-for-zaglav {
+        max-width: 644px;
+    }
+
+    .text-benefits {
+        max-width: 644px;
+    }
+
+    .list-for-benefits {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+
+    }
+
+    .list-for-benefits li {
+        width: calc((100% - 24px) / 2);
+    }
+}
