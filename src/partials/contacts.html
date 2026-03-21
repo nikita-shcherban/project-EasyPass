@@ -1,29 +1,23 @@
 <section class="contacts">
   <div class="container">
-    <ul class="contacts-list">
-      <li class="contacts-list-item">
-        <h3 class="contacts-under-title">Contacts</h3>
-      </li>
-      <li class="contacts-list-item">
-        <h1 class="contacts-title">Contacts</h1>
-      </li>
-      <li class="contacts-list-item">
-        <p class="contacts-text">We'd love to hear from you anytime!</p>
-      </li>
-    </ul>
+    <div class="container-contacts-title-text">
+      <h3 class="contacts-under-title">Contacts</h3>
+      <h2 class="contacts-title">Get in Touch</h2>
+      <p class="contacts-text">We'd love to hear from you anytime!</p>
+    </div>
     <address class="contacts-adress">
       <ul class="contacts-adress-list">
         <li class="contacts-mail-item">
-          <svg class="contact-icon" width="24" height="24">
-            <use href="../img/icon.svg#basketball"></use>
+          <svg class="contacts-icon" width="24" height="24" aria-hidden="true">
+            <use href="/img/icons.svg#icon-mail"></use>
           </svg>
           <a href="mailto:hello@organicstore.com" class="contacts-mail-link"
             >hello@organicstore.com</a
           >
         </li>
         <li class="contacts-num-item">
-          <svg class="contacts-icon" width="24" height="24">
-            <use href=""></use>
+          <svg class="contacts-icon" width="24" height="24" aria-hidden="true">
+            <use href="/img/icons.svg#icon-telefon"></use>
           </svg>
           <a href="tel:+15553291024" class="contacts-num-link"
             >+1 (555) 329-1024</a
@@ -34,34 +28,54 @@
     <!-- feedbackform -->
     <form class="feedback-form" name="feedback" autocomplete="off">
       <div class="feedback-wrapper">
-        <label class="form-label" for="userName"></label>
-        <div class="feedback-field">
-          <input class="form-input" name="userName" type="text" id="userName" />
-        </div>
-      </div>
-      <div class="feedback-wrapper">
-        <label class="form-label" for="userEmail"></label>
+        <label class="form-label" for="userName">Name</label>
         <div class="feedback-field">
           <input
             class="form-input"
-            name="userEmail"
+            name="userName"
             type="text"
-            id="userEmail"
+            id="userName"
+            placeholder="Sarah"
+            pattern="^[a-zA-Z\s.]{5,64}$"
+            required
           />
         </div>
       </div>
       <div class="feedback-wrapper">
-        <label class="form-label" for="userComment">Comment</label>
+        <label class="form-label" for="userEmail">Email</label>
+        <div class="feedback-field">
+          <input
+            class="form-input"
+            name="userEmail"
+            type="email"
+            id="userEmail"
+            placeholder="hello@organic.com"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            required
+          />
+          <p class="text-valid">Success!</p>
+          <p class="text-invalid">Invalid email, try again</p>
+        </div>
+      </div>
+      <div class="feedback-wrapper">
+        <label class="form-label" for="userComment">Message</label>
         <textarea
-          class="feedback-commentar"
+          class="feedback-message"
           name="userComment"
           id="userComment"
           rows="10"
-          placeholder="Text input"
+          maxlength="500"
+          placeholder="Type your message..."
         ></textarea>
-        <button class="submit">Submit</button>
-        <img src="../img/#" alt="family" />
       </div>
     </form>
+    <button class="submit-btn" type="submit">Submit</button>
+    <img
+      src="/img/contacts-image@1x.jpg"
+      alt="team"
+      class="contacts-image"
+      srcset="/img/contacts-image@1x.jpg,/img/contacts-image@2x.jpg"
+      loading="lazy"
+    />
   </div>
 </section>
