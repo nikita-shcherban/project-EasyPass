@@ -1,15 +1,12 @@
 
 .benefits {
-    padding: 64px 16px;
     background-color: #1A5901;
-    display: flex;
-
 }
 
-.benefits-glav {
+.benefits-main {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    padding: 64px 0;
 }
 
 .img-benefits {
@@ -20,19 +17,11 @@
     font-family: 'Chivo', sans-serif;
     margin-bottom: 24px;
     color: #FFFFFF;
-    font-weight: 400;
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: -0.01em;
 }
 
-.text-for-zaglav {
-    font-family: 'Public Sans', sans-serif;
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-}
 
 .text-benefits {
     margin-bottom: 32px;
@@ -59,26 +48,23 @@
     font-family: 'Chivo', sans-serif;
     margin-bottom: 16px;
     color: #FFFFFF;
-    font-weight: 400;
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: -0.01em;
 }
 
 .par-for {
-    font-family: 'Public Sans', sans-serif;
+    /* font-family: 'Public Sans', sans-serif;*/
     color: #FFFFFF;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
     max-width: 343px;
 }
 
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-    .benefits-glav {
-        max-width: 704px;
+    .benefits-main {
+       
         margin: 0 auto;
     }
 
@@ -92,9 +78,9 @@
         width: calc((100% - 32px) / 2);
     }
 
-    .text-benefits {
-        max-width: 704px;
-    }
+        .text-benefits {
+            max-width: 704px;
+        }
 }
 
 /* Desk */
@@ -102,15 +88,15 @@
 @media screen and (min-width: 1440px) {
 
     .benefits {
-        padding: 96px 64px;
-    }
+            padding: 48px 0;
+        }
 
-    .benefits-glav {
+    .benefits-main {
         max-width: 1440px;
         margin: 0 auto;
         flex-direction: row;
         align-items: center;
-        gap: 64px;
+        gap: 24px;
     }
 
     .img-benefits {
