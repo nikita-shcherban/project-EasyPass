@@ -60,13 +60,13 @@
     max-width: 343px;
 }
 
+.text-for-zaglav {
+    margin-bottom: 32px;
+}
+
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-    .benefits-main {
-       
-        margin: 0 auto;
-    }
 
     .list-for-benefits {
         flex-direction: row;
@@ -78,9 +78,6 @@
         width: calc((100% - 32px) / 2);
     }
 
-        .text-benefits {
-            max-width: 704px;
-        }
 }
 
 /* Desk */
@@ -92,8 +89,7 @@
         }
 
     .benefits-main {
-        max-width: 1440px;
-        margin: 0 auto;
+        
         flex-direction: row;
         align-items: center;
         gap: 24px;
@@ -110,14 +106,6 @@
 
     .zaglav {
         font-size: 48px;
-    }
-
-    .text-for-zaglav {
-        max-width: 644px;
-    }
-
-    .text-benefits {
-        max-width: 644px;
     }
 
     .list-for-benefits {
