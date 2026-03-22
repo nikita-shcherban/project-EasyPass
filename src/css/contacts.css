@@ -204,17 +204,11 @@
 .feedback-message::placeholder {
   color: rgba(1, 4, 0, 0.6);
 }
-/* .feedback-message:not(:placeholder-shown):invalid ~ .message-error {
+.feedback-message:not(:placeholder-shown):invalid ~ .message-error {
   display: block;
-} */
-.feedback-message:valid {
-  border-color: #a00000;
-}
-.feedback-message:focus:invalid {
-  border-color: #a00000;
 }
 .feedback-message:focus::placeholder {
-  color: #a00000;
+  color: #010400;
 }
 .feedback-message:not(:placeholder-shown):invalid {
   border-color: #a00000;
