@@ -3,9 +3,6 @@
   padding-bottom: 64px;
 }
 
-.container {
-}
-
 .contacts-container {
   display: flex;
   flex-direction: column;
@@ -82,6 +79,13 @@
   outline: none;
   border-bottom: 1px solid rgba(1, 4, 0, 0.15);
 }
+.text-name-valid,
+.text-name-invalid {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
 
 .text-valid,
 .text-invalid {
@@ -96,10 +100,6 @@
   outline: none;
   padding: 12px;
   width: 100%;
-}
-
-.message-error {
-  display: none;
 }
 
 .submit-btn {
@@ -119,6 +119,11 @@
 }
 
 /* text/color/ */
+
+.message-error {
+  display: none;
+  color: #a00000;
+}
 
 .contacts-under-title {
   font-weight: 600;
@@ -175,8 +180,6 @@
     color 250ms ease-in-out;
 }
 
-/* hover/focus/active */
-
 .contacts-mail-link:hover,
 .contacts-mail-link:focus,
 .contacts-num-link:hover,
@@ -210,6 +213,14 @@
 .feedback-message:focus::placeholder {
   color: #010400;
 }
+.form-input:focus::placeholder {
+  color: #010400;
+}
+
+.form-input:focus::placeholder {
+  display: none;
+}
+
 .feedback-message:not(:placeholder-shown):invalid {
   border-color: #a00000;
 }
@@ -230,6 +241,15 @@
 }
 
 .form-input:not(:placeholder-shown):valid ~ .text-valid {
+  display: block;
+  color: #3cbc81;
+}
+.form-input:not(:placeholder-shown):invalid ~ .text-name-invalid {
+  display: block;
+  color: #a00000;
+}
+
+.form-input:not(:placeholder-shown):valid ~ .text-name-valid {
   display: block;
   color: #3cbc81;
 }
