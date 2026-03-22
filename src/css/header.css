@@ -15,8 +15,9 @@
   width: 142px;
   height: 60px;
   fill: #fff;
-}
-.header-logo-icon {
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 .header-burger-btn {
   display: flex;
@@ -34,10 +35,13 @@
   transition-timing-function: ease-in-out;
 }
 .header-burger-btn:hover,
-.header-burger-btn:focus {
+.header-burger-btn:focus,
+.header-logo:hover,
+.header-logo:focus {
   opacity: 0.5;
 }
-.header-burger-btn:active {
+.header-burger-btn:active,
+.header-logo:active {
   opacity: 0.6;
 }
 @media only screen and (min-width: 768px) {
