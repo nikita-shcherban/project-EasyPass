@@ -209,7 +209,12 @@
 .feedback-message:not(:placeholder-shown):invalid ~ .message-error {
   display: block;
 }
-
+.feedback-message:focus:invalid {
+  border-color: #a00000;
+}
+.feedback-message:focus::placeholder {
+  color: #a00000;
+}
 .feedback-message:not(:placeholder-shown):invalid {
   border-color: #a00000;
 }
