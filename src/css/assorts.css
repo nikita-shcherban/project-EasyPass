@@ -128,6 +128,10 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+    .assorts-tittle {
+       max-width: 344px;
+    }
+    
     .assorts-item {
         width: calc((100% - 16px) / 2);
         min-width: 320px;
@@ -137,7 +141,6 @@
         margin-bottom: 16px;
         width: 344px;
         height: 364.8px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
         object-fit: cover;
     }
 
