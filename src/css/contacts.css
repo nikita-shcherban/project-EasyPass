@@ -12,9 +12,11 @@
   flex: 1;
   min-width: 0;
 }
+
 .contacts-container-right {
   flex-shrink: 0;
 }
+
 .container-contacts-title-text {
   display: flex;
   align-items: flex-start;
@@ -25,12 +27,15 @@
 .contacts-under-title {
   padding-bottom: 16px;
 }
+
 .contacts-title {
   padding-bottom: 24px;
 }
+
 .contacts-address {
   padding-bottom: 32px;
 }
+
 .contacts-address-list {
   font-size: 16px;
 }
@@ -62,6 +67,7 @@
   flex-direction: column;
   width: 100%;
 }
+
 .form-label {
   padding-bottom: 8px;
 }
@@ -79,6 +85,7 @@
   outline: none;
   border-bottom: 1px solid rgba(1, 4, 0, 0.15);
 }
+
 .text-name-valid,
 .text-name-invalid {
   display: none;
@@ -94,6 +101,7 @@
   font-size: 12px;
   line-height: 1.5;
 }
+
 .feedback-message {
   border: 1px solid rgba(1, 4, 0, 0.15);
   resize: none;
@@ -123,6 +131,7 @@
 .message-error {
   display: none;
   color: #a00000;
+  font-size: 16px;
 }
 
 .contacts-under-title {
@@ -130,6 +139,7 @@
   font-size: 16px;
   color: #010400;
 }
+
 .contacts-title {
   font-family: 'Chivo', sans-serif;
   font-weight: 400;
@@ -138,6 +148,7 @@
   letter-spacing: -0.01em;
   color: #010400;
 }
+
 .contacts-text {
   color: #010400;
 }
@@ -155,7 +166,9 @@
 .form-input {
   color: #010400;
   background-color: transparent;
-  transition: border-color 250ms ease-in-out;
+  transition:
+    border-color,
+    color 250ms ease-in-out;
 }
 
 .form-label {
@@ -182,17 +195,26 @@
     color 250ms ease-in-out;
 }
 
+.form-input,
+.feedback-message {
+  transition: opacity 250ms ease-in-out;
+}
+/* hover/focus */
+
+.form-input:focus {
+  color: #010400;
+}
+
 .contacts-mail-link:hover,
 .contacts-mail-link:focus,
 .contacts-num-link:hover,
 .contacts-num-link:focus {
-  color: #1a1d19;
   opacity: 0.5;
+  color: #1a1d19;
 }
 
 .contacts-mail-link:active,
 .contacts-num-link:active {
-  color: #010400;
   opacity: 0.6;
 }
 
@@ -201,6 +223,7 @@
   background-color: #5e8a4d;
   color: #010400;
 }
+
 .submit-btn:active {
   background-color: #1a5901;
   opacity: 0.2;
@@ -210,35 +233,33 @@
 
 .form-input:focus::placeholder,
 .feedback-message:focus::placeholder {
-  transition: opacity 250ms ease-in-out;
-}
-
-.form-input:focus::placeholder,
-.feedback-message:focus::placeholder {
   opacity: 0;
 }
 
-.feedback-message::placeholder {
-  color: rgba(1, 4, 0, 0.6);
-}
-.feedback-message:not(:placeholder-shown):invalid ~ .message-error {
-  display: block;
-}
-.feedback-message:focus::placeholder {
+.form-input:hover::placeholder,
+.feedback-message:hover::placeholder {
   color: #010400;
 }
 
-.feedback-message:not(:placeholder-shown):invalid {
+/* textarea */
+
+.feedback-message::placeholder {
+  color: rgba(1, 4, 0, 0.6);
+  transition: opacity 250ms ease-in-out;
+}
+
+.feedback-message:focus:placeholder-shown {
   border-color: #a00000;
 }
 
-.form-input:focus::placeholder {
-  color: #010400;
+.feedback-message:focus:placeholder-shown ~ .message-error {
+  display: block;
 }
 
-.form-input:focus::placeholder {
-  display: none;
+.feedback-message:not(:placeholder-shown) {
+  border-color: rgba(1, 4, 0, 0.15);
 }
+/* Form Input Placeholders */
 
 .form-input::placeholder {
   color: rgba(1, 4, 0, 0.6);
@@ -251,20 +272,14 @@
 .form-input:not(:placeholder-shown):valid {
   border-color: #3cbc81;
 }
-.form-input:not(:placeholder-shown):invalid ~ .text-invalid {
-  display: block;
-  color: #a00000;
-}
 
-.form-input:not(:placeholder-shown):valid ~ .text-valid {
-  display: block;
-  color: #3cbc81;
-}
+.form-input:not(:placeholder-shown):invalid ~ .text-invalid,
 .form-input:not(:placeholder-shown):invalid ~ .text-name-invalid {
   display: block;
   color: #a00000;
 }
 
+.form-input:not(:placeholder-shown):valid ~ .text-valid,
 .form-input:not(:placeholder-shown):valid ~ .text-name-valid {
   display: block;
   color: #3cbc81;
