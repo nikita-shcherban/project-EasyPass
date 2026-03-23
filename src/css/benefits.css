@@ -70,11 +70,11 @@
 .list-for-benefits {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 32px 16px;
 }
     
 .list-for-benefits li {
-    width: calc((100% - 32px) / 2);
+    width: calc((100% - 16px) / 2);
 }
     
 
