@@ -147,7 +147,9 @@
   color: #010400;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  transition: opacity 250ms ease-in-out;
+  transition:
+    color,
+    opacity 250ms ease-in-out;
 }
 
 .form-input {
@@ -184,11 +186,13 @@
 .contacts-mail-link:focus,
 .contacts-num-link:hover,
 .contacts-num-link:focus {
+  color: #1a1d19;
   opacity: 0.5;
 }
 
 .contacts-mail-link:active,
 .contacts-num-link:active {
+  color: #010400;
   opacity: 0.6;
 }
 
@@ -204,6 +208,16 @@
 
 /* Placeholder */
 
+.form-input:focus::placeholder,
+.feedback-message:focus::placeholder {
+  transition: opacity 250ms ease-in-out;
+}
+
+.form-input:focus::placeholder,
+.feedback-message:focus::placeholder {
+  opacity: 0;
+}
+
 .feedback-message::placeholder {
   color: rgba(1, 4, 0, 0.6);
 }
@@ -213,6 +227,11 @@
 .feedback-message:focus::placeholder {
   color: #010400;
 }
+
+.feedback-message:not(:placeholder-shown):invalid {
+  border-color: #a00000;
+}
+
 .form-input:focus::placeholder {
   color: #010400;
 }
@@ -221,9 +240,6 @@
   display: none;
 }
 
-.feedback-message:not(:placeholder-shown):invalid {
-  border-color: #a00000;
-}
 .form-input::placeholder {
   color: rgba(1, 4, 0, 0.6);
 }
