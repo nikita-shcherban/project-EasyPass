@@ -21,7 +21,6 @@
 @media (min-width: 768px) {
     .mission-text {
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
@@ -30,8 +29,7 @@
     }
 
     .mission-txt {
-        font-size: 18px;
-        line-height: 1.5;
+        margin-top: 0;
         max-width: 340px;
         letter-spacing: 0;
     }
