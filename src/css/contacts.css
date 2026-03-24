@@ -123,8 +123,7 @@
 .contacts-image {
   object-position: center;
   object-fit: cover;
-  width: 343px;
-  height: 343px;
+  width: 100%;
 }
 
 /* text/color/ */
@@ -272,10 +271,6 @@
 /* @Media */
 
 @media only screen and (min-width: 768px) {
-  .contacts-image {
-    width: 704px;
-    height: 637px;
-  }
   .submit-btn {
     width: 343px;
   }
@@ -287,10 +282,6 @@
   }
 }
 @media only screen and (min-width: 1440px) {
-  .contacts-image {
-    width: 644px;
-    height: 757px;
-  }
   .contacts {
     padding: 112px 0;
   }
