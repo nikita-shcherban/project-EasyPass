@@ -181,8 +181,9 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
+  transition-delay: 150ms;
 }
-.mobile-tab-menu.is-open {
+.menu-overlay.is-open .mobile-tab-menu {
   transform: translateX(0);
 }
 @media only screen and (min-width: 768px) {
