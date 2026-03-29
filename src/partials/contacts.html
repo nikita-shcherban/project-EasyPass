@@ -2,7 +2,7 @@
   <div class="container contacts-container">
     <div class="contacts-container-left">
       <div class="container-contacts-title-text">
-        <h3 class="contacts-under-title">Contacts</h3>
+        <p class="contacts-under-title">Contacts</p>
         <h2 class="contacts-title">Get in Touch</h2>
         <p class="contacts-text">We'd love to hear from you anytime!</p>
       </div>
@@ -89,13 +89,32 @@
     </div>
 
     <div class="contacts-container-right">
-      <img
-        src="/img/contacts-img@1x.jpg"
-        alt="team"
-        class="contacts-image"
-        srcset="/img/contacts-img@1x.jpg 1x, /img/contacts-img@2x.jpg 2x"
-        loading="lazy"
-      />
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            /img/contacts-img-desktop@1x.jpg 1x,
+            /img/contacts-img-desktop@2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            /img/contacts-img-tablet@1x.jpg 1x,
+            /img/contacts-img-tablet@2x.jpg 2x
+          "
+        />
+        <img
+          src="/img/contacts-img-mobile@1x.jpg"
+          alt="A small, friendly team of people"
+          class="contacts-image"
+          srcset="
+            /img/contacts-img-mobile@1x.jpg 1x,
+            /img/contacts-img-mobile@1x.jpg 2x
+          "
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 </section>
